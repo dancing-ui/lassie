@@ -69,7 +69,7 @@ def eval_model():
         iou /= num_imgs
         print('Overall IOU = %.4f' % iou)
         
-    with open(osp.join(cfg.output_eval_dir, '%s.txt'%cfg.animal_class) ,'w') as f:
+    with open(osp.join(cfg.eval_dir, '%s.txt'%cfg.animal_class) ,'w') as f:
         f.write('PCK = %.4f\n' % pck)
         if cfg.animal_class in ['horse', 'cow', 'sheep']:
             f.write('Overall IOU = %.4f\n' % iou)
